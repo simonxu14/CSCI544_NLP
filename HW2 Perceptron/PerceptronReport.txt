@@ -1,0 +1,65 @@
+Assignment 2 Report
+
+Name: Xinlong Xu
+USC-ID: 7860029645
+
+Part I.
+
+1. Performance of standard perceptron on the development data with 100% of the training data
+1a. spam precision: 0.9912
+1b. spam recall:    0.9826
+1c. spam F1 score:  0.9869
+1d. ham precision:  0.9582
+1e. ham recall:     0.9787
+1f. ham F1 score:   0.9683
+
+2. Performance of averaged perceptron on the development data with 100% of the training data
+2a. spam precision: 0.9918
+2b. spam recall:    0.9829
+2c. spam F1 score:  0.9873
+2d. ham precision:  0.9589
+2e. ham recall:     0.9829
+2f. ham F1 score:   0.9873
+
+Part II.
+
+3. Performance of standard perceptron on the development data with 10% of the training data
+3a. spam precision: 0.9552
+3b. spam recall:    0.9224
+3c. spam F1 score:  0.9385
+3d. ham precision:  0.8247
+3e. ham recall:     0.8940
+3f. ham F1 score:   0.8580
+
+4. Performance of averaged perceptron on the development data with 10% of the training data
+4a. spam precision: 0.9639
+4b. spam recall:    0.9088
+4c. spam F1 score:  0.9355
+4d. ham precision:  0.8040
+4e. ham recall:     0.9166
+4f. ham F1 score:   0.8566
+
+Part III. You are welcome to reuse code you wrote for assignment 1,
+but we would like to know how you handled the following tasks.
+
+5. How did you calculate precision, recall and F1 score? If you used a
+separate script, please give the name of the script and describe how
+to run it.
+I run the per_classify.py firstly. According to the output file, I check each line of the output file, compare the
+result and the real category of the email. If the result is same as the real category of the email, means it's a
+successful classification, else it's not. And I use all of it to calculate the precision, recall and F1.
+
+
+6. How did you separate 10% of the training data? If you used a
+separate script, please give the name of the script and describe how
+to run it. Explain how you or your code choose the files.
+
+# array_map_ham = array_map_ham[:int(len(array_map_ham)/10)]
+# array_map_spam = array_map_spam[:int(len(array_map_spam)/10)]
+
+I use these two lines to separate 10% of the training data. I calculate the words of each file and put it in a map for
+each file, and I put all the maps in a array. If I use 100% of the training data, I keep the array unchanged, if I use
+10% of the training data, I remove the remaining 90% of the map in the array, keep the first 10%. In this way, the
+program could separate 10% of the training data.
+
+

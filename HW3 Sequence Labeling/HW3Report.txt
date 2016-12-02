@@ -1,0 +1,35 @@
+Assignment 3 Report
+
+Name: Xinlong Xu
+USC-ID: 7860029645
+
+1. If you included files other than baseline_crf.py, advanced_crf.py, evaluate_model.py, and hw3_corpus_tool.py, or modified hw3_corpus_tool.py please describe what the files do and/or your modifications to hw3_corpus_tool.py.
+There isn't any other file included in my project.
+
+
+2. Describe how you evaluated your baseline and advanced features
+I use 75% of the labeled data as training data, and use the other 25% as testing data. Run the baseline_crf and
+advaned_crf separately, calculate the accuracy of each result and compare the result.
+
+
+3. Describe your advanced feature set.
+(1) Feature:"beginWithPos" & "beginWithToken"
+    Detail :Tag the first token and pos in utterance, because it's important and may determine the act_tag.
+(2) Feature:"endWithPos" & "endWithToken"
+    Detail :Tag the last token and pos in utterance, because it's important and may determine the act_tag.
+(3) Feature:"pos2" & "token2"
+    Detail :Use bi-grams, because a contiguous sequence of 2 items is important to determine the act_tag.
+(4) Feature:"pos3" & "token3"
+    Detail :Use tri-grams, because a contiguous sequence of 3 items is important to determine the act_tag.
+
+4. If you tried alternate advanced feature sets, please describe them.
+I tried different features to the baseline features and see if it can improve the accuracy. If it can import the
+accuracy, use it, if not, abandon it. For example, I tried to remove pos and token if a sentence only has "." or ",",
+but I found it's of no help to improve the accuracy, so I didn't add this feature.
+
+
+5. Accuracy of baseline features was:
+rate:0.7458885668718811
+
+6. Accuracy of advanced features was:
+rate:0.8236756812374599

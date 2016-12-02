@@ -1,0 +1,1 @@
+The font size was to small i change it, but everytime i change chapter it returns to undesired size, same thing if i reopen the book

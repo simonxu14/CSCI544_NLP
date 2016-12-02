@@ -1,0 +1,1 @@
+Hard to find all pokemon by image. There should be an index at the beginning with mini icons of all the pokemon in the book indexed to the pages they're on.
